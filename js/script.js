@@ -10,7 +10,7 @@ var app = new Vue ({
                 profile_pic: 'img/avatar_1.jpg',
                 status: true, 
                 /* for online status, replace last login ideally */
-                selected: true, 
+                selected: false, 
                 /* selected in chat list */
                 chat: [
                     {
@@ -41,7 +41,7 @@ var app = new Vue ({
                 profile_pic: 'img/avatar_2.jpg',
                 status: false, 
                 /* for online status, replace last login ideally */
-                selected: false, 
+                selected: true, 
                 /* selected in chat list */
                 chat: [
                     {
@@ -110,7 +110,7 @@ var app = new Vue ({
         ],
         methods: {
             changeChat: function() {
-                
+
             }
         }
 

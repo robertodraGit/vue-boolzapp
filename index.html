@@ -85,15 +85,15 @@
                 
                 <div class="chat-id-right">
 
-                    <div class="id-name-login">
+                    <div v-for='(item, index) in users' v-if='item.selected' class="id-name-login">
 
                         <div class="profile-pic">
-                            <img class='profile-picture' src="img/avatar_3.jpg" alt="">
+                            <img class='profile-picture' :src='item.profile_pic' alt="">
                         </div>
                         
                         <div class="name-lastlogin">
-                            <p>Francesco</p>
-                            <span>Ultimo accesso oggi 23/11/2020, alle 7:55</span>
+                            <p>{{item.name}}</p>
+                            <span>Ultimo accesso {{item.lastlogin}}</span>
                         </div>
 
                     </div>
