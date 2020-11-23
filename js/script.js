@@ -3,6 +3,7 @@ var app = new Vue ({
 
     el: '#app',
     data: {
+        chatIndex: 0,
         personal: true,
         personalinfo: {
             name: 'Roberto',
@@ -115,6 +116,8 @@ var app = new Vue ({
         ]
     },
     methods: {
-
+        changeChat: function(i) {
+            
+        }
     }
 })
