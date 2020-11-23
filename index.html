@@ -63,7 +63,7 @@
                         <!-- box that scroll with all the chats -->
                     <div class="chat-list">
                             <!-- every chat printed with v-for -->
-                        <div v-for="(item, index) in users" @click='' class="chat-list-item">
+                        <div v-for="(item, index) in users" class="chat-list-item">
                             <div class="chat-item-id">
                                 <div class="chat-id-photo">
                                     <img class='profile-picture' :src="item.profile_pic" alt="">
@@ -110,15 +110,14 @@
                     
                     <div class="sub-chat">
 
-                        <div class="message-sent">
+                        <div v-if='users.selected' v-for='(item, index) in users.chat' :class="item.sender ? {'message-sent'} : {'message-received'}">
                             <p class="message">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sed quia nulla at est, expedita dolore accusamus reprehenderit consectetur minima asperiores optio dolorum recusandae sunt sequi consequuntur! Maiores, quia assumenda!
+                                <!-- {{messages.message}} -->
                             </p>
                             <span class="date-and-time">
-                                    10/10/2020, 20:54
+                                <!-- {{chat.time}} -->
                             </span>
                         </div>
-
                     </div>
 
                 </div>

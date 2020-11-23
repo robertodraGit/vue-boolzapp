@@ -41,7 +41,7 @@ var app = new Vue ({
                 profile_pic: 'img/avatar_2.jpg',
                 status: false, 
                 /* for online status, replace last login ideally */
-                selected: true, 
+                selected: false, 
                 /* selected in chat list */
                 chat: [
                     {
@@ -77,41 +77,39 @@ var app = new Vue ({
                 profile_pic: 'img/avatar_3.jpg',
                 status: false, 
                 /* for online status, replace last login ideally */
-                selected: false, 
+                selected: true, 
                 /* selected in chat list */
                 chat: [
                     {
                         message: 'Ti sto per bloccare',
-                        sender: 'you',
+                        sender: false,
                         time: '22/11/2020, 12:00'
                     },
                     {
                         message: 'Dai ti prego Maria sono anche i miei figli',
-                        sender: 'me',
+                        sender: true,
                         time: '22/11/2020, 16:10'
                     },
                     {
                         message: "Nel sogno che ho fatto eri con un'altra. Non dovevi.",
-                        sender: 'you',
+                        sender: false,
                         time: '22/11/2020, 16:30'
                     },
                     {
                         message: 'UN SOGNO UN SOGNO è UN SOGNO',
-                        sender: 'me',
+                        sender: true,
                         time: '22/11/2020, 17:12'
                     },
                     {
                         message: "TRA L'ALTRO è UN TUO SOGNO, NEMMENO MIO",
-                        sender: 'me',
+                        sender: true,
                         time: '22/11/2020, 17:13'
                     }               
                 ]
             }
         ],
         methods: {
-            changeChat: function() {
-                
-            }
+
         }
 
     }
