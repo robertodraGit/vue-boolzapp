@@ -63,17 +63,17 @@
 
                     <div class="chat-list">
 
-                        <div class="chat-list-item">
+                        <div v-for="(item, index) in users" @click='' class="chat-list-item">
 
                             <div class="chat-item-id">
 
                                 <div class="chat-id-photo">
-                                    <img class='profile-picture' src="img/avatar_1.jpg" alt="">
+                                    <img class='profile-picture' :src="item.profile_pic" alt="">
                                 </div>
     
                                 <div class="chat-id-name-text">
-                                    <p>Francesco</p>
-                                    <span>Ok...</span>
+                                    <p>{{item.name}}</p>
+                                    <span>{{item.chat[item.chat.length-1].message}}</span>
                                 </div>
 
                             </div>
@@ -84,7 +84,7 @@
     
                         </div>
 
-                        <div class="chat-list-item">
+                        <!-- <div class="chat-list-item">
 
                             <div class="chat-item-id">
 
@@ -145,7 +145,7 @@
                                 <span>10/10/2020, 20:59</span>
                             </div>
     
-                        </div>
+                        </div> -->
 
                     </div>
 
