@@ -107,10 +107,9 @@ var app = new Vue ({
                     }               
                 ]
             }
-        ],
-        methods: {
-
-        }
-
+        ]
+    },
+    methods: {
+        
     }
 })

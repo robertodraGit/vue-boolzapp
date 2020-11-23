@@ -110,12 +110,12 @@
                     
                     <div class="sub-chat">
 
-                        <div v-if='users.selected' v-for='(item, index) in users.chat' :class="item.sender ? {'message-sent'} : {'message-received'}">
+                        <div v-if='users.selected' v-for='(item, index) in users.chat' :class="item.sender ? 'message-sent' : 'message-received'">
                             <p class="message">
-                                <!-- {{messages.message}} -->
+                                {{chat.message}}
                             </p>
                             <span class="date-and-time">
-                                <!-- {{chat.time}} -->
+                                {{chat.time}}
                             </span>
                         </div>
                     </div>
