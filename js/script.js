@@ -5,6 +5,7 @@ var app = new Vue ({
     data: {
         chatIndex: 0,
         personal: true,
+        selected_user:"",
         personalinfo: {
             name: 'Roberto',
             profile_pic: 'img/avatar_4.jpg'
@@ -16,7 +17,7 @@ var app = new Vue ({
                 profile_pic: 'img/avatar_1.jpg',
                 status: true, 
                 /* for online status, replace last login ideally */
-                selected: false, 
+                selected: true, 
                 /* selected in chat list */
                 chat: [
                     {
@@ -83,7 +84,7 @@ var app = new Vue ({
                 profile_pic: 'img/avatar_3.jpg',
                 status: false, 
                 /* for online status, replace last login ideally */
-                selected: true, 
+                selected: false, 
                 /* selected in chat list */
                 chat: [
                     {
@@ -116,8 +117,8 @@ var app = new Vue ({
         ]
     },
     methods: {
-        changeChat: function(i) {
-            
+        changeChat: function(index) {
+            this.chatIndex = index;
         }
     }
 })

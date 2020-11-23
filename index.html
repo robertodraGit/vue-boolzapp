@@ -85,12 +85,12 @@
                     <div v-for='(item, index) in users' v-if='item.selected' class="id-name-login">
 
                         <div class="profile-pic">
-                            <img class='profile-picture' :src='item.profile_pic' alt="">
+                            <img class='profile-picture' :src='users[chatIndex].profile_pic' alt="">
                         </div>
                         
                         <div class="name-lastlogin">
-                            <p>{{item.name}}</p>
-                            <span>Ultimo accesso {{item.lastlogin}}</span>
+                            <p>{{users[chatIndex].name}}</p>
+                            <span>Ultimo accesso {{users[chatIndex].lastlogin}}</span>
                         </div>
 
                     </div>
