@@ -253,7 +253,7 @@ input {
 }
 
 .sub-chat {
-    /* padding: 1rem 1.5rem; */
+    padding: 1rem 1.5rem;
     display: flex;
     flex-flow: column;
     height: auto;

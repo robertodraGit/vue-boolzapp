@@ -19,10 +19,10 @@
     
                 <div class="profile-nav">
 
-                    <div class="profile-name">
+                    <div class="profile-name" v-if="personal">
 
-                        <img class='profile-picture' src="img/avatar_4.jpg" alt="">
-                        <p>Luisa</p>
+                        <img class='profile-picture' :src="personalinfo.profile_pic" alt="">
+                        <p>{{personalinfo.name}}</p>
     
                     </div>
 
@@ -58,11 +58,8 @@
                     </div>
                     
                 </div>
-                    <!-- chat list div for scrolling  -->
                 <div class="chat-list-box">
-                        <!-- box that scroll with all the chats -->
                     <div class="chat-list">
-                            <!-- every chat printed with v-for -->
                         <div v-for="(item, index) in users" class="chat-list-item">
                             <div class="chat-item-id">
                                 <div class="chat-id-photo">
@@ -107,8 +104,8 @@
                 </div>
     
                 <div class="chat">
-                    <div class="sub-chat" v-for='user in users'>
-                        <div v-if="user.selected" v-for="message in user.chat" :class="message.sender ? 'message-sent' : 'message-received'">
+                    <div class="sub-chat" v-for='user in users' v-if='user.selected'>
+                        <div v-for="message in user.chat" :class="message.sender ? 'message-sent' : 'message-received'">
                             <p class="message">
                                     {{message.message}}
                             </p>

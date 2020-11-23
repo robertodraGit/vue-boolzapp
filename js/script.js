@@ -3,6 +3,11 @@ var app = new Vue ({
 
     el: '#app',
     data: {
+        personal: true,
+        personalinfo: {
+            name: 'Roberto',
+            profile_pic: 'img/avatar_4.jpg'
+        },
         users: [
             {
                 name: 'Francesco',
@@ -15,22 +20,22 @@ var app = new Vue ({
                 chat: [
                     {
                         message: 'Lorem ipsum',
-                        sender: 'me',
+                        sender: true,
                         time: '10/10/2020, 20:54'
                     },
                     {
                         message: 'Cos?',
-                        sender: 'you',
+                        sender: false,
                         time: '10/10/2020, 20:59'
                     },
                     {
                         message: 'Non sai il latino? Grave',
-                        sender: 'me',
+                        sender: true,
                         time: '10/10/2020, 21:30'
                     },
                     {
                         message: 'Gne gne',
-                        sender: 'you',
+                        sender: false,
                         time: '10/10/2020, 21:54'
                     }
                 ]
@@ -46,27 +51,27 @@ var app = new Vue ({
                 chat: [
                     {
                         message: 'Maria ti prego fammi rivedere i nostri figli',
-                        sender: 'me',
+                        sender: true,
                         time: '22/11/2020, 14:50'
                     },
                     {
                         message: 'Ma che vuoi sono tua sorella idiota',
-                        sender: 'you',
+                        sender: false,
                         time: '22/11/2020, 15:12'
                     },
                     {
                         message: 'Ops scusami Claudia',
-                        sender: 'me',
+                        sender: true,
                         time: '22/11/2020, 15:13'
                     },
                     {
                         message: 'Ti faccio un bonifico se non racconti nulla alla mamma',
-                        sender: 'me',
+                        sender: true,
                         time: '22/11/2020, 15:14'
                     },
                     {
                         message: 'Andata',
-                        sender: 'you',
+                        sender: false,
                         time: '22/11/2020, 16:00'
                     }
                 ]
@@ -110,6 +115,6 @@ var app = new Vue ({
         ]
     },
     methods: {
-        
+
     }
 })
