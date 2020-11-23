@@ -255,11 +255,11 @@ input {
 .sub-chat {
     padding: 1rem 1.5rem;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     height: auto;
 }
 
-.block-message-sent {
+/* .block-message-sent {
     width: 100%;
     display: flex;
     justify-content: end;
@@ -269,7 +269,7 @@ input {
     width: 100%;
     display: flex;
     justify-content: start;
-}
+} */
 
 .message-sent {
     background-color: #cafab4;
