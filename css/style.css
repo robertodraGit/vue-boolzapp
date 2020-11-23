@@ -259,18 +259,6 @@ input {
     height: auto;
 }
 
-/* .block-message-sent {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-}
-
-.block-message-received {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-} */
-
 .message-sent {
     background-color: #cafab4;
     border-radius: 10px;
@@ -281,6 +269,7 @@ input {
     padding-right: 0.7rem;
     padding-bottom: 0.7rem;
     margin: 0.2rem 0;
+    align-self: flex-end;
 }
 
 .message-received {
@@ -293,6 +282,7 @@ input {
     padding-right: 0.7rem;
     padding-bottom: 0.7rem;
     margin: 0.2rem 0;
+    align-self: flex-start;
 }
 
 .message {

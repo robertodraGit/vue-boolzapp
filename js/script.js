@@ -110,7 +110,7 @@ var app = new Vue ({
         ],
         methods: {
             changeChat: function() {
-
+                
             }
         }
 
