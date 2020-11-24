@@ -256,7 +256,7 @@ input {
     padding: 1rem 1.5rem;
     display: flex;
     flex-flow: column;
-    height: auto;
+    /* height: auto; */
 }
 
 .message-sent {
