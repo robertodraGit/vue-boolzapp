@@ -6,6 +6,7 @@ var app = new Vue ({
         chatIndex: 0,
         personal: true,
         selected_user:"",
+        input_user:"",
         personalinfo: {
             name: 'Roberto',
             profile_pic: 'img/avatar_4.jpg'
@@ -16,9 +17,7 @@ var app = new Vue ({
                 lastlogin: '23/11/2020, alle 7:55',
                 profile_pic: 'img/avatar_1.jpg',
                 status: true, 
-                /* for online status, replace last login ideally */
                 selected: true, 
-                /* selected in chat list */
                 chat: [
                     {
                         message: 'Lorem ipsum',
@@ -47,9 +46,7 @@ var app = new Vue ({
                 lastlogin: '24/11/2020, alle 07:00',
                 profile_pic: 'img/avatar_2.jpg',
                 status: false, 
-                /* for online status, replace last login ideally */
                 selected: false, 
-                /* selected in chat list */
                 chat: [
                     {
                         message: 'Maria ti prego fammi rivedere i nostri figli',
@@ -83,9 +80,7 @@ var app = new Vue ({
                 lastlogin: '23/11/2020, alle 21:30',
                 profile_pic: 'img/avatar_3.jpg',
                 status: false, 
-                /* for online status, replace last login ideally */
                 selected: false, 
-                /* selected in chat list */
                 chat: [
                     {
                         message: 'Ti sto per bloccare',
@@ -124,6 +119,27 @@ var app = new Vue ({
                 return user;
             })
             this.users[index].selected=true;
+        },
+
+        getTime: function () {
+            let today = new Date();
+            let dayTime = today.getDate() + '/' + (today.getMonth() + 1)+ '/' +today.getFullYear() + ',';
+            let hours = today.getHours() + ":";
+            let minutes = (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
+            let clock = hours + minutes; 
+            var dateTime = dayTime +' '+ clock;
+            return dateTime;
+        },
+        
+        sendChat: function() {
+            if (this.input_user != '') {
+                this.users[this.chatIndex].chat.push(
+                    {   message: this.input_user,
+                        sender: true,
+                        time: this.getTime()
+                    });
+            }
+            this.input_user='';
         }
     }
 })

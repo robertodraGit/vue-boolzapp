@@ -119,22 +119,23 @@
                             </span>
                         </div>
                     </div>
+                    
                 </div>
-    
+
                 <div class="message-input">
 
                     <div class="emoji">
                         <i class="far fa-smile"></i>
                     </div>
-    
+        
                     <div class="message-area">
-                        <input placeholder='Scrivi un messaggio' type="text">
+                        <input @keyup.enter="sendChat" value='' v-model='input_user' placeholder='Scrivi un messaggio' type="text">
                     </div>
-    
+        
                     <div class="record-message">
                         <i class="fas fa-microphone"></i>
                     </div>
-
+    
                 </div>
     
             </div>
