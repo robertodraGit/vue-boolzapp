@@ -31,6 +31,10 @@ input {
     display: flex;
 }
 
+i:hover {
+    opacity: 80%;
+}
+
 /* left side css rules */
 
 .left-side {
@@ -84,6 +88,10 @@ input {
     justify-content: flex-start;
     align-items: center;
     padding-left: 1rem;
+}
+
+.banner-notifications:hover {
+    background-color: #89e0ff;
 }
 
 .bell-text > p {
@@ -160,6 +168,10 @@ input {
     width: 100%;
     height: 100px;
     border-bottom: 2px solid #f5f5f5;
+}
+
+.chat-list-item:hover {
+    background-color: #f4f5f5;
 }
 
 .chat-item-id {

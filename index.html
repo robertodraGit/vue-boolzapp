@@ -60,16 +60,21 @@
                 </div>
                 <div class="chat-list-box">
                     <div class="chat-list">
+                        
                         <div v-for="(item, index) in users" class="chat-list-item" :class="{'selected-chat': item.selected}" @click='changeChat(index)'>
+
                             <div class="chat-item-id">
+                                    <!-- profile pic chat list -->
                                 <div class="chat-id-photo">
                                     <img class='profile-picture' :src="item.profile_pic" alt="">
-                                </div>
+                                </div>  
+                                    <!-- chat name + last message -->
                                 <div class="chat-id-name-text">
                                     <p>{{item.name}}</p>
                                     <span>{{item.chat[item.chat.length-1].message}}</span>
                                 </div>
                             </div>
+                                <!-- last message timestamp -->
                             <div class="chat-time">
                                 <span>{{item.chat[item.chat.length-1].time}}</span>
                             </div>

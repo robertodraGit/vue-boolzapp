@@ -119,6 +119,11 @@ var app = new Vue ({
     methods: {
         changeChat: function(index) {
             this.chatIndex = index;
+            this.users.map(function(user, index) {
+                user.selected = user.selected === this.chatIndex;
+                return user;
+            })
+            this.users[index].selected=true;
         }
     }
 })
