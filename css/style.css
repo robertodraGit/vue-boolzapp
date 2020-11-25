@@ -279,10 +279,11 @@ i:hover {
     padding-top: 0.9rem;
     padding-left: 0.9rem;
     padding-right: 0.7rem;
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.3rem;
     margin: 0.2rem 0;
     align-self: flex-end;
     word-wrap: break-word;
+    position: relative;
 }
 
 .message-received {
@@ -293,11 +294,27 @@ i:hover {
     padding-top: 0.9rem;
     padding-left: 0.9rem;
     padding-right: 0.7rem;
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.3rem;
     margin: 0.2rem 0;
     align-self: flex-start;
     word-wrap: break-word;
+    position: relative;
 }
+
+.message-sent > i {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    color: #777777;
+}
+
+.message-received > i {
+    top: 2%;
+    position: absolute;
+    right: 3%;
+    color: #777777;
+}
+
 
 .message {
     font-weight: 500;
@@ -306,6 +323,7 @@ i:hover {
 .date-and-time {
     color: #aaaaaa;
     font-size: 0.8rem;
+    padding-top: 0.2rem;
     float: right;
     font-weight: 600;
 }
@@ -350,4 +368,30 @@ i:hover {
 .message-area > i {
     color: #7a7a7a;
     font-size: 1.5rem;   
+}
+
+.dropdown-msg-menu {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    height: 75px;
+    width: 200px;
+    padding-left: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #c4c4c4;
+    z-index: 20;
+}
+
+.dropdown-msg-menu > p {
+    line-height: 2.2rem;
+}
+
+.dropdown-msg-menu > p:hover {
+    text-decoration: underline;
+}
+
+.display-class {
+    display: block;
 }

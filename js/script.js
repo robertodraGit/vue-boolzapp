@@ -8,6 +8,7 @@ var app = new Vue ({
         selected_user:"",
         input_user:"",
         search_user:"",
+        showChatDropdown: false,
         personalinfo: {
             name: 'Roberto',
             profile_pic: 'img/avatar_4.jpg'
@@ -121,6 +122,7 @@ var app = new Vue ({
             })
             this.users[index].selected=true;
             this.scroll();
+            this.showChatDropdown = false;
         },
 
         getTime: function () {
@@ -143,6 +145,7 @@ var app = new Vue ({
             }
             this.input_user='';
             this.scroll();
+            this.showChatDropdown = false;
         },
 
         receiveChat: function () {
@@ -175,6 +178,18 @@ var app = new Vue ({
                     user.status = false;
                 };
             });
+        },
+
+        dropdownMsgMenu: function() {
+            if (this.showChatDropdown === false) {
+                this.showChatDropdown = true;
+            } else {
+                this.showChatDropdown = false;
+            }
+        },
+
+        deleteMsg: function(index) {
+            this.users.chat.splice(index, 1);
         }
     }
         
