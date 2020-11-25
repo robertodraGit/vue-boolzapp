@@ -112,7 +112,7 @@
                     <div class="sub-chat" v-for='user in users' v-if='user.selected'>
                         <div v-for="(message, index) in users[chatIndex].chat" :class="message.sender ? 'message-sent' : 'message-received'">
                             <i @click='dropdownMsgMenu(index)' class="fas fa-chevron-down"></i>
-                            <div :class="{'display-class': showChatDropdown}" class='dropdown-msg-menu'>
+                            <div :class="{'display-class': message.drop === true}" class='dropdown-msg-menu'>
                                 <p @click='deleteMsg(index)'>Elimina messaggio</p>
                                 <p>Info messaggio</p>
                             </div>

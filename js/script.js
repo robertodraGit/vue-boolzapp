@@ -180,16 +180,13 @@ var app = new Vue ({
             });
         },
 
-        dropdownMsgMenu: function() {
-            if (this.showChatDropdown === false) {
-                this.showChatDropdown = true;
+        dropdownMsgMenu: function(i) {
+            if (this.users[this.indexChat].chat[i].drop === true) {
+              Vue.delete(this.users[this.indexChat].chat[i], "drop")
             } else {
-                this.showChatDropdown = false;
+              this.removeSelect()
+              Vue.set(this.users[this.indexChat].chat[i], "drop", true)
             }
-        },
-
-        deleteMsg: function(index) {
-            this.users.chat.splice(index, 1);
         }
     }
         
