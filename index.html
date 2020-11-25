@@ -129,7 +129,7 @@
                     </div>
         
                     <div class="message-area">
-                        <input @keyup.enter="sendChat" value='' v-model='input_user' placeholder='Scrivi un messaggio' type="text">
+                        <input @keyup.enter="sendChat(); delayReceivedChat()" value='' v-model='input_user' placeholder='Scrivi un messaggio' type="text">
                     </div>
         
                     <div class="record-message">

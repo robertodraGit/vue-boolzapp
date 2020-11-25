@@ -282,6 +282,7 @@ i:hover {
     padding-bottom: 0.7rem;
     margin: 0.2rem 0;
     align-self: flex-end;
+    word-wrap: break-word;
 }
 
 .message-received {
@@ -295,6 +296,7 @@ i:hover {
     padding-bottom: 0.7rem;
     margin: 0.2rem 0;
     align-self: flex-start;
+    word-wrap: break-word;
 }
 
 .message {

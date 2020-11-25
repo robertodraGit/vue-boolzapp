@@ -140,6 +140,17 @@ var app = new Vue ({
                     });
             }
             this.input_user='';
+        },
+        receiveChat: function () {
+            this.users[this.chatIndex].chat.push(
+                {   message: "Non mi interessa.", 
+                    sender: false, 
+                    time: this.getTime()
+                });
+          },
+      
+        delayReceivedChat: function () {
+            setTimeout(this.receiveChat, 1000);
         }
     }
 })
