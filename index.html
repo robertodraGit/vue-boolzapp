@@ -108,7 +108,7 @@
 
                 </div>
     
-                <div class="chat">
+                <div id="chat">
                     <div class="sub-chat" v-for='user in users' v-if='user.selected'>
                         <div v-for="message in users[chatIndex].chat" :class="message.sender ? 'message-sent' : 'message-received'">
                             <p class="message">
@@ -130,6 +130,7 @@
         
                     <div class="message-area">
                         <input @keyup.enter="sendChat(); delayReceivedChat()" value='' v-model='input_user' placeholder='Scrivi un messaggio' type="text">
+                        <i class="fas fa-paper-plane" @click='sendChat(); delayReceivedChat()'></i>
                     </div>
         
                     <div class="record-message">
