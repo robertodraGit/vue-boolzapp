@@ -7,6 +7,7 @@ var app = new Vue ({
         personal: true,
         selected_user:"",
         input_user:"",
+        search_user:"",
         personalinfo: {
             name: 'Roberto',
             profile_pic: 'img/avatar_4.jpg'
@@ -45,7 +46,7 @@ var app = new Vue ({
                 name: 'Claudia',
                 lastlogin: '24/11/2020, alle 07:00',
                 profile_pic: 'img/avatar_2.jpg',
-                status: false, 
+                status: true, 
                 selected: false, 
                 chat: [
                     {
@@ -79,7 +80,7 @@ var app = new Vue ({
                 name: 'Maria',
                 lastlogin: '23/11/2020, alle 21:30',
                 profile_pic: 'img/avatar_3.jpg',
-                status: false, 
+                status: true, 
                 selected: false, 
                 chat: [
                     {
@@ -158,12 +159,23 @@ var app = new Vue ({
         },
 
         scrollToEnd: function() {    	
-            var chat = this.$el.querySelector("#chat");
+            let chat = this.$el.querySelector("#chat");
             chat.scrollTop = chat.scrollHeight;
         },
 
         scroll: function() {
             setTimeout(this.scrollToEnd, 0);
+        },
+
+        filterChat: function() {
+            this.users.forEach(user => {
+                if (user.name.toLowerCase().includes(this.search_user.toLowerCase())) {
+                    user.status = true;
+                } else {
+                    user.status = false;
+                };
+            });
         }
     }
+        
 })
