@@ -119,6 +119,7 @@ var app = new Vue ({
                 return user;
             })
             this.users[index].selected=true;
+            this.scroll();
         },
 
         getTime: function () {
@@ -140,7 +141,7 @@ var app = new Vue ({
                     });
             }
             this.input_user='';
-            this.scrollToEnd();
+            this.scroll();
         },
 
         receiveChat: function () {
@@ -149,7 +150,7 @@ var app = new Vue ({
                     sender: false, 
                     time: this.getTime()
                 });
-            this.scrollToEnd();
+            this.scroll();
           },
       
         delayReceivedChat: function () {
@@ -159,6 +160,10 @@ var app = new Vue ({
         scrollToEnd: function() {    	
             var chat = this.$el.querySelector("#chat");
             chat.scrollTop = chat.scrollHeight;
+        },
+
+        scroll: function() {
+            setTimeout(this.scrollToEnd, 0);
         }
     }
 })
