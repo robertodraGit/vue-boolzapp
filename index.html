@@ -110,15 +110,22 @@
     
                 <div id="chat">
                     <div class="sub-chat" v-for='user in users' v-if='user.selected'>
+                            <!-- chat print -->
                         <div v-for="(message, index) in users[chatIndex].chat" :class="message.sender ? 'message-sent' : 'message-received'">
+                                <!-- chevron for dropdown menu -->
                             <i @click='dropdownMsgMenu(index)' class="fas fa-chevron-down"></i>
-                            <div :class="{'display-class': message.drop === true}" class='dropdown-msg-menu'>
+                                <!-- dropdown menu -->
+                            <div class='dropdown-msg-menu' :class="{displayClass: message.drop}">
+                                    <!-- options of menu -->
                                 <p @click='deleteMsg(index)'>Elimina messaggio</p>
                                 <p>Info messaggio</p>
+
                             </div>
+                                <!-- chat's messages -->
                             <p class="message">
                                     {{message.message}}
                             </p>
+                                <!-- date and time of messages -->
                             <span class="date-and-time">
                                     {{message.time}}
                             </span>
